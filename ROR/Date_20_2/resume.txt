@@ -1,0 +1,6 @@
+Name: nency
+Age: 22
+Address: gondal
+Email: nencyahir180@gmail.com
+Phone: 9328006180
+experience: 1
