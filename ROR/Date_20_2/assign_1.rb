@@ -1,6 +1,6 @@
 require 'date'
 
-
+puts "Goal:calculate your exact age by taking default birthday(year,month,date,hours and min)"
 birthdate = DateTime.new(2002,4,1,2,30,0)
 
 
