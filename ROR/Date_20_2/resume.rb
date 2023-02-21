@@ -23,13 +23,6 @@ file.write("Email: #{email}\n")
 file.write("Phone: #{phone}\n")
 file.write("experience: #{experience}\n")
 
-aFile = File.new("resume.txt", "r")
-if aFile
-   content = aFile.sysread(20)
-   puts content
-else
-   puts "Unable to open file!"
-end
 
-puts "Resume Created"
 
+puts "Your resume is Created"
