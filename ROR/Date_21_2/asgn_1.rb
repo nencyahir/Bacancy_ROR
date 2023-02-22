@@ -1,5 +1,3 @@
-
-
 array = File.read("array.txt").scan(/\d+/).map(&:to_i)
 hash=Hash.new(0)
 counts =Proc.new{array.each {  |element| hash[element] += 1 }}
