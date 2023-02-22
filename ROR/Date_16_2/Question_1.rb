@@ -10,7 +10,7 @@ module Bank
          
         
         def deposit
-            puts "Enter the amount that yor want to deposit: "
+            puts "Enter the amount that yor want to deposit in the account: "
             amount=gets.chomp.to_i
             @a_balance= @a_balance+amount
          
@@ -18,7 +18,7 @@ module Bank
         end
          
         def withdraw 
-            puts "Enter the amount that you want to withdraw: "
+            puts "Enter the amount that you want to withdraw in the account: "
             withdraw=gets.chomp.to_i
             @a_balance= @a_balance - withdraw
            
@@ -48,7 +48,7 @@ module Bank
                      choice=gets.chomp.to_i
                      case choice
                      when 1
-                    puts @account_balance.balance
+                    puts @account_balance.a_balance
                     
                      when 2  
                       proc_test = Proc.new { @account_balance.deposit}
@@ -60,6 +60,10 @@ module Bank
                      else
                        @condition = false
                      end
+                     else
+                     puts "Please enter the correct pin"
+                     start
+                     break    
                 end  
             end
          end
@@ -71,7 +75,6 @@ account=Bank::Account.new(5000)
 
 atm=Bank::Atm.new(account)
 atm.start
-
 
 
 
