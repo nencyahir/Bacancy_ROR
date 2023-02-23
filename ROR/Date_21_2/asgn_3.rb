@@ -1,6 +1,6 @@
 elements = ['two', 'three', 'one']
 
-print elements
+
 
 unsorted_hash= {'three' => 3, 'two' => 2, 'one' => 1}
 
