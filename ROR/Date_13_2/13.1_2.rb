@@ -1,85 +1,62 @@
-
-
-class Mamaearth
-   @@a=1
-    def initialize( p_name,p_price)
-      
-        @product_name=p_name
-        @product_price =p_price
+COMPANY_NAME = "Mamaearth"
+$productcompany = "MamaearthBeauty"
+class Product
+    @@inc=1
+    
+    def initialize(name,price)
+        @productname = name
+        @productprice = price
     end
-
-   def cal
-       cal= @product_price.to_i * @gst.to_i
-          total=cal / 100.0
-          @finalgst=total.to_i+@product_price.to_i
-   end
-   
-    def keyboard
-        
-         print "enter your name : \n "
-           @name=gets
-       print "your gst number \n"
-         @gst=gets  
-     
-      
-      
-        
-   end
-   
-   def display
-        puts "name is #{@name}"
-       puts "gst is #{@gst}"
-       print"Welcome #{@name} Your invoice with #{@gst}% are below\n"
-       print "-----------------------product #{ @@a} details:-----------------------------------\n"
-        
-        print " #{@product_name} : #{@finalgst} \n"
-       
-         @@a=@@a+1
-       
-         
-   end
-   
-   def user
-       
-   end
   
-   def comapny
-       
-   end
+    def getdetails
+    	puts "--------------------Welcome #{COMPANY_NAME} ----------------------"
+    	puts "--------------------- For Product #{@@inc} -----------------------"
+        puts "enter your name:"
+        @fname=gets
+        print "enter gst:"
+        @gst=gets
+    end
+    
+    def calc
+    	product_price = @productprice.to_i * @gst.to_i
+        total_price = product_price / 100
+        @totalprice = total_price.to_i + @productprice.to_i
+    end
+    
+    def displaydetails
+    	 
+        p "Welcome #{@fname} Your invoice with #{@gst}% gst are below"
+        print "Product details with orignal price:"
+        print" #{$productcompany} : #{@productname} - #{@productprice}"
+        print "product details with gst:"
+        print "#{$productcompany} : #{@productname} - #{@totalprice}"
+        @@inc=@@inc + 1
+    end
+    
+
 end
 
-var1=Mamaearth.new("Tea-tree shampoo",100 )
-var1.keyboard
-var1.cal
-var1.display
+product1=Product.new("Tea-tree shampoo",100 )
+product1.getdetails
+product1.calc
+product1.displaydetails
 
-var2=Mamaearth.new("Eau De Parfum",700)
-var2.keyboard
-var2.cal
-var2.display
+product2=Product.new("Eau De Parfum",700)
+product2.getdetails
+product2.calc
+product2.displaydetails
 
-var3=Mamaearth.new("Vitamin C Body Lotion",500)
-var3.keyboard
-var3.cal
-var3.display
+product3=Product.new("Vitamin C Body Lotion",500)
+product3.getdetails
+product3.calc
+product3.displaydetails
 
-var4=Mamaearth.new("Ubtan Face Wash",300)
-var4.keyboard
-var4.cal
-var4.display
+product4=Product.new("Ubtan Face Wash",300)
+product4.getdetails
+product4.calc
+product4.displaydetails
 
-var5=Mamaearth.new("Glow Serum Foundation",1000,"user5","vapi")
-var5.keyboard
-var5.cal
-var5.display
-
-
-
-
-
-
-
-
-
-
-
+product5=Product.new("Glow Serum Foundation",1000,"user5","vapi")
+product5.getdetails
+product5.calc
+product5.displaydetails
