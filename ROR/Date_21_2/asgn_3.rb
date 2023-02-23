@@ -1,7 +1,5 @@
 elements = ['two', 'three', 'one']
 
-
-
 unsorted_hash= {'three' => 3, 'two' => 2, 'one' => 1}
 
 sorted_hash=lambda{
