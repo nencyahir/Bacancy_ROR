@@ -1,29 +1,24 @@
 class User
-  CONSTANT='rajkot'
-  def initialize(var_user)
-  
-  @@user=var_user
-  
+  CONST_VAR='rajkot'
+  def initialize(visitor)
+      @@user=visitor
   end
 end
 
 class Company < User
-  def initialize(var_company)
-  @company=var_company
+  def initialize(office)
+      @company=office
   end
-  def display()
-  puts " city name is #{CONSTANT}"
-  puts " company name is #{@company}"
-  puts " user name is #{@@user}"
+  
+  def display
+  puts "\n\nCity name is #{CONST_VAR}"
+  puts "Company name is #{@company}"
+  puts "User name is #{@@user}"
   end
  
 end
 
 
-var_user=User.new('nency')
-var_company=Company.new('bacancy')
-var_company.display
-
-
-
-
+user=User.new('Nencyahir')
+company=Company.new('Bacancy')
+company.display
