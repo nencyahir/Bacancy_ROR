@@ -4,12 +4,10 @@ class User
       @@user=visitor
   end
 end
-
 class Company < User
   def initialize(office)
       @company=office
   end
-  
   def display
   puts "\n\nCity name is #{CONST_VAR}"
   puts "Company name is #{@company}"
@@ -17,8 +15,6 @@ class Company < User
   end
  
 end
-
-
 user=User.new('Nencyahir')
 company=Company.new('Bacancy')
 company.display
